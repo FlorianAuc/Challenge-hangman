@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Staatliches&display=swap"
+      rel="stylesheet"/>
+    <link rel="stylesheet" href="css/style.css" />
+    <meta name="description" content="Tentez de deviner les mots cacher sans perdre !"/>
+    <title>Challenge-hangman</title>
+  </head>
+  <body>
+    
+    <h1>Challenge-hangman</h1>
+    <p>Save stickman's life by finding the right word</p>
+
+    <div class="jeu-content">
+      <svg height="250" width="200" class="figure-content">
+        <!-- Potence -->
+        <line x1="60" y1="20" x2="140" y2="20"class="figure-part" />
+        <line x1="140" y1="20" x2="140" y2="50" class="figure-part"/>
+        <line x1="60" y1="20" x2="60" y2="230" class="figure-part"/>
+        <line x1="20" y1="230" x2="100" y2="230" class="figure-part"/>
+
+        <!-- Bonhomme -->
+        <!-- head -->
+        <circle cx="140" cy="70" r="20" class="figure-part" />
+
+        <!-- body -->
+        <line x1="140" y1="90" x2="140" y2="150" class="figure-part" />
+
+        <!-- arms -->
+        <line x1="140" y1="120" x2="120" y2="100" class="figure-part" />
+        <line x1="140" y1="120" x2="160" y2="100" class="figure-part" />
+
+        <!-- legs -->
+        <line x1="140" y1="150" x2="120" y2="180" class="figure-part" />
+        <line x1="140" y1="150" x2="160" y2="180" class="figure-part" />
+      </svg>
+
+      <div class="bad-letters-content">
+        <p>Wrong answers</p>
+        <div class="bad-letters" id="bad-letters"></div>
+      </div>
+
+      <div class="word" id="word"> </div>
+    </div>
+
+    <div class="popup-content" id="popup-content">
+      <div class="winner">
+        <h2 id="message-final">You have found the right word !</h2>
+        <button class="replay-btn" id="replay-btn">Replay !</button>
+      </div>
+    </div>
+
+    <div class="notif-content" id="notif-content">
+      <p>You have already used this letter.</p>
+    </div>
+    
+
+    <script src="Assets/hanged.js"></script>
+  </body>
+</html>

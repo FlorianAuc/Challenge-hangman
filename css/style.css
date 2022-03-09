@@ -1,0 +1,182 @@
+/*font-family: 'Roboto', sans-serif;
+font-family: 'Staatliches', cursive;*/
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: #bda6a6;
+  font-family: "Roboto", sans-serif;
+  letter-spacing: 1px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 80vh;
+  overflow: hidden;
+}
+
+body p {
+  font-size: 30px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+h1 {
+  margin-top: 20px;
+  text-align: center;
+  font-family: "Staatliches", cursive;
+  font-size: 60px;
+  letter-spacing: 3px;
+  font-weight: bold;
+  text-shadow: 0px -3px 3px rgba(0, 0, 0, 0.157);
+}
+
+.jeu-content {
+  padding: 20px 30px;
+  margin: auto;
+  height: 350px;
+  width: 450px;
+  position: relative;
+}
+
+.jeu-content .figure-content {
+  stroke: black;
+  stroke-width: 4px;
+  stroke-linecap: round;
+  fill: transparent;
+}
+
+.jeu-content .figure-content .figure-part {
+  display: none;
+}
+
+.jeu-content .bad-letters-content {
+  position: absolute;
+  top: 10px;
+  right: 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-align: right;
+}
+
+.jeu-content .bad-letters-content p {
+  margin: 0 0 5px;
+  font-size: 25px;
+  letter-spacing: 2px;
+}
+
+.jeu-content .bad-letters-content span {
+  font-size: 20px;
+  color: red;
+}
+
+.jeu-content .word {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 20px;
+  -webkit-transform: translateX(20%);
+          transform: translateX(20%);
+}
+
+.jeu-content .word .letters {
+  border-bottom: 2px solid black;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-size: 35px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: 0px 2px;
+  width: 20px;
+  font-family: 'Staatliches', cursive;
+}
+
+.popup-content {
+  background-color: rgba(0, 0, 0, 0.479);
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  display: none;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.popup-content .winner {
+  background: rgba(0, 0, 0, 0.192);
+  color: white;
+  border-radius: 5px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.192);
+          box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.192);
+  padding: 30px;
+  text-align: center;
+}
+
+.popup-content .winner button {
+  background: white;
+  cursor: pointer;
+  border: 0;
+  margin-top: 10px;
+  padding: 10px 40px;
+  font-size: 20px;
+  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.192);
+          box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.192);
+}
+
+.popup-content .winner button:hover {
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.popup-content .winner button:active {
+  -webkit-transform: scale(0.98);
+          transform: scale(0.98);
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+}
+
+.notif-content {
+  background-color: rgba(0, 0, 0, 0.192);
+  border-radius: 5px 5px 0px 0px;
+  padding: 10px 60px;
+  position: absolute;
+  bottom: -120px;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+
+.affiche {
+  -webkit-transform: translateY(-120px);
+          transform: translateY(-120px);
+}
+/*# sourceMappingURL=style.css.map */
