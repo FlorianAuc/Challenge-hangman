@@ -8,7 +8,7 @@ font-family: 'Staatliches', cursive;*/
 }
 
 body {
-  background: #bda6a6;
+  background: #ccbcbc;
   font-family: "Roboto", sans-serif;
   letter-spacing: 1px;
   display: -webkit-box;
@@ -109,7 +109,7 @@ h1 {
           justify-content: center;
   margin: 0px 2px;
   width: 20px;
-  font-family: 'Staatliches', cursive;
+  font-family: "Staatliches", cursive;
 }
 
 .popup-content {
@@ -163,6 +163,24 @@ h1 {
   transition: 0.2s;
 }
 
+.keybord {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.keybord .input_keybord {
+  padding: 10px 20px;
+  cursor: pointer;
+  color: white;
+  background: #443e3e;
+  border: none;
+  margin: 2px 0px;
+}
+
+.keybord .input_keybord:active {
+  background-color: black;
+}
+
 .notif-content {
   background-color: rgba(0, 0, 0, 0.192);
   border-radius: 5px 5px 0px 0px;
@@ -178,5 +196,29 @@ h1 {
 .affiche {
   -webkit-transform: translateY(-120px);
           transform: translateY(-120px);
+}
+
+/* mobile */
+@media screen and (max-width: 767.98px) {
+  .keybord {
+    text-align: center;
+    margin-top: 20px;
+    width: 80%;
+  }
+  .notif-content {
+    bottom: -190px;
+  }
+  .affiche {
+    -webkit-transform: translateY(-190px);
+            transform: translateY(-190px);
+  }
+}
+
+@media screen and (min-width: 760px) {
+  .keybord {
+    text-align: center;
+    margin-top: 20px;
+    width: 40%;
+  }
 }
 /*# sourceMappingURL=style.css.map */

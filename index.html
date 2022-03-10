@@ -6,25 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Staatliches&display=swap"
-      rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Staatliches&display=swap" rel="stylesheet"/>
     <link rel="stylesheet" href="css/style.css" />
     <meta name="description" content="Tentez de deviner les mots cacher sans perdre !"/>
     <title>Challenge-hangman</title>
   </head>
   <body>
-    
     <h1>Challenge-hangman</h1>
     <p>Save stickman's life by finding the right word</p>
 
     <div class="jeu-content">
       <svg height="250" width="200" class="figure-content">
         <!-- Potence -->
-        <line x1="60" y1="20" x2="140" y2="20"class="figure-part" />
-        <line x1="140" y1="20" x2="140" y2="50" class="figure-part"/>
-        <line x1="60" y1="20" x2="60" y2="230" class="figure-part"/>
-        <line x1="20" y1="230" x2="100" y2="230" class="figure-part"/>
+        <line x1="20" y1="230" x2="100" y2="230" class="figure-part" />
+        <line x1="60" y1="20" x2="60" y2="230" class="figure-part" />
+        <line x1="60" y1="20" x2="140" y2="20" class="figure-part" />
+        <line x1="140" y1="20" x2="140" y2="50" class="figure-part" />
 
         <!-- Bonhomme -->
         <!-- head -->
@@ -47,7 +44,7 @@
         <div class="bad-letters" id="bad-letters"></div>
       </div>
 
-      <div class="word" id="word"> </div>
+      <div class="word" id="word"></div>
     </div>
 
     <div class="popup-content" id="popup-content">
@@ -57,10 +54,38 @@
       </div>
     </div>
 
+    <div class="keybord">
+      <input type="button" value="a" class="input_keybord" />
+      <input type="button" value="z" class="input_keybord" />
+      <input type="button" value="e" class="input_keybord" />
+      <input type="button" value="r" class="input_keybord" />
+      <input type="button" value="t" class="input_keybord" />
+      <input type="button" value="y" class="input_keybord" />
+      <input type="button" value="u" class="input_keybord" />
+      <input type="button" value="i" class="input_keybord" />
+      <input type="button" value="o" class="input_keybord" />
+      <input type="button" value="p" class="input_keybord" />
+      <input type="button" value="q" class="input_keybord" />
+      <input type="button" value="s" class="input_keybord" />
+      <input type="button" value="d" class="input_keybord" />
+      <input type="button" value="f" class="input_keybord" />
+      <input type="button" value="g" class="input_keybord" />
+      <input type="button" value="h" class="input_keybord" />
+      <input type="button" value="j" class="input_keybord" />
+      <input type="button" value="k" class="input_keybord" />
+      <input type="button" value="l" class="input_keybord" />
+      <input type="button" value="m" class="input_keybord" />
+      <input type="button" value="w" class="input_keybord" />
+      <input type="button" value="x" class="input_keybord" />
+      <input type="button" value="c" class="input_keybord" />
+      <input type="button" value="v" class="input_keybord" />
+      <input type="button" value="b" class="input_keybord" />
+      <input type="button" value="n" class="input_keybord" />
+    </div>
+
     <div class="notif-content" id="notif-content">
       <p>You have already used this letter.</p>
     </div>
-    
 
     <script src="Assets/hanged.js"></script>
   </body>
