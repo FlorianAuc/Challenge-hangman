@@ -33,7 +33,7 @@ h1 {
   font-weight: bold;
   text-shadow: 0px -3px 3px rgba(0, 0, 0, 0.157);
 }
-
+/* jeu content*/
 .jeu-content {
   padding: 20px 30px;
   margin: auto;
@@ -90,7 +90,7 @@ h1 {
     }
   }
 }
-
+/*popup*/
 .popup-content {
   background-color: rgba(0, 0, 0, 0.479);
   position: fixed;
@@ -131,22 +131,24 @@ h1 {
     }
   }
 }
-
-.keybord {
+/* keyboard button */
+.keyboard {
   text-align: center;
   margin-top: 20px;
 
-  .input_keybord {
+  .input_keyboard {
     padding: 10px 20px;
     cursor: pointer;
     color: white;
     background: rgb(68, 62, 62);
     border: none;
-    margin: 2px 0px;
+    margin: 2px 1px;
+    text-transform: uppercase;
   }
 
-  .input_keybord:active {
+  .input_keyboard:active {
     background-color: black;
+    transform: scale(0.90);
   }
 }
 
@@ -165,7 +167,7 @@ h1 {
 
 /* mobile */
 @media screen and (max-width: 767.98px) {
-  .keybord {
+  .keyboard {
     text-align: center;
     margin-top: 20px;
     width: 80%;
@@ -179,9 +181,9 @@ h1 {
     transform: translateY(-190px);
   }
 }
-
+/* desktop */
 @media screen and (min-width: 760px) {
-  .keybord {
+  .keyboard {
     text-align: center;
     margin-top: 20px;
     width: 40%;

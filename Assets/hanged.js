@@ -4,9 +4,9 @@ const replayBtn = document.getElementById("replay-btn");
 const popup = document.getElementById("popup-content");
 const notification = document.getElementById("notif-content");
 const messageFinal = document.getElementById("message-final");
-const input_button = document.querySelectorAll(".input_keybord");
-
+const input_button = document.getElementById("keyboard");
 const Bonhomme = document.querySelectorAll(".figure-part");
+const compteur = document.getElementById('life')
 
 const words = [
   "rythme",
@@ -50,6 +50,7 @@ const words = [
   "loin",
 ];
 
+//mot random de mon tableau
 let selectWord = words[Math.floor(Math.random() * words.length)];
 
 const goodLettersArr = [""];
@@ -71,12 +72,12 @@ function showWord() {
       .join("")}
     
     `;
-  //enlever les espaces (ecrire sur la meme ligne)
+  //enlever les espaces (ecrire sur la meme ligne popup)
   const internWord = wordsEl.innerText.replace(/\n/g, "");
 
   //popup
   if (internWord === selectWord) {
-    messageFinal.innerText = "You have found the right word !";
+    messageFinal.innerText = "Congratulations, you saved stick man !";
     popup.style.display = "flex";
   }
 }
@@ -102,7 +103,7 @@ function updateBadLetterEl() {
   //affiche le popup de defaite
 
   if (badLettersArr.length === Bonhomme.length) {
-    messageFinal.innerText = "You did not find the word, you lost !";
+    messageFinal.innerText = "Oh no, you didn't manage to save the stick man !";
     popup.style.display = "flex";
   }
 }
@@ -148,12 +149,15 @@ window.addEventListener("keydown", (e) => {
 });
 
 //clavier 'click'
+input_button.innerHTML = ''
+for(i = 65; i <= 90; i++){
+  let letter = String.fromCharCode(i)
+  input_button.innerHTML += `<button id="${letter}" class="input_keyboard">${letter}</button>`
+}
 
 
-// boutton rejouer
-
+//bouton replay
 replayBtn.addEventListener("click", () => {
-  //reset
   goodLettersArr.splice(0);
   badLettersArr.splice(0);
 
