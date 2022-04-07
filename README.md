@@ -37,8 +37,6 @@ try to think the *structure*, the "*backend*" (functionality) and the *frontend*
 
 
 
-NOTE: The instructions below are meant to guide you not impose a way of doing
-things, what matters is the end result.
 
 **Instructions**:
 
