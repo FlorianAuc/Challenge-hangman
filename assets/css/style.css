@@ -3,7 +3,7 @@ font-family: 'Staatliches', cursive;*/
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
 }
 
@@ -22,12 +22,12 @@ body {
       -ms-flex-align: center;
           align-items: center;
   height: 80vh;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 body p {
   font-size: 30px;
-  margin-top: 20px;
+  margin-top: 10px;
   text-align: center;
 }
 
@@ -35,7 +35,7 @@ h1 {
   margin-top: 20px;
   text-align: center;
   font-family: "Staatliches", cursive;
-  font-size: 60px;
+  font-size: 50px;
   letter-spacing: 3px;
   font-weight: bold;
   text-shadow: 0px -3px 3px rgba(0, 0, 0, 0.157);
@@ -220,7 +220,27 @@ h1 {
   }
 }
 
-/* desktop */
+@media screen and (max-width: 420px) {
+  .jeu-content .bad-letters-content p {
+    margin: 8px 90px;
+    font-size: 17px;
+    letter-spacing: 2px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .jeu-content .bad-letters-content span {
+    font-size: 17px;
+    margin: 0px auto;
+  }
+}
+
+@media screen and (max-width: 570px) {
+  .jeu-content .figure-content {
+    margin: 27px 30px;
+  }
+}
+
 @media screen and (min-width: 760px) {
   .keyboard {
     text-align: center;

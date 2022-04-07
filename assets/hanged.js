@@ -52,6 +52,7 @@ const words = [
 
 //mot random de mon tableau
 let selectWord = words[Math.floor(Math.random() * words.length)];
+console.log(selectWord);
 
 const goodLettersArr = [""];
 const badLettersArr = [];
@@ -116,7 +117,7 @@ function showNotification() {
     notification.classList.remove("affiche");
   }, 1500);
 }
-
+//clavier window
 window.addEventListener("keydown", (e) => {
   if (e.keyCode >= 65 && e.keyCode <= 90) {
     const letter = e.key;
@@ -141,7 +142,8 @@ window.addEventListener("keydown", (e) => {
         badLettersArr.push(letter);
 
         updateBadLetterEl();
-      } else {
+      } 
+      else {
         showNotification();
       }
     }
@@ -151,10 +153,44 @@ window.addEventListener("keydown", (e) => {
 //clavier 'click'
 input_button.innerHTML = ''
 for(i = 65; i <= 90; i++){
-  let letter = String.fromCharCode(i)
-  input_button.innerHTML += `<button id="${letter}" class="input_keyboard">${letter}</button>`
+  let letter = String.fromCharCode(i).toLocaleLowerCase()
+  input_button.innerHTML += `<button class="input_keyboard">${letter}</button>`
 }
 
+let getButton = document.getElementsByClassName('input_keyboard')
+for(let j = 0; j < getButton.length; j++){
+  getButton[j].addEventListener('click', () =>{
+          
+         if (selectWord.includes(getButton[j].innerHTML)) {
+      
+            //bonnes lettres
+          if (!goodLettersArr.includes(getButton[j].innerHTML)) {
+            goodLettersArr.push(getButton[j].innerHTML);
+    
+            showWord();
+          }
+    
+          //si la lettre a déjà été rentrer
+          else {
+            showNotification();
+          }
+        } 
+        
+        else {
+          
+            //fausses lettres
+          if (!badLettersArr.includes(getButton[j].innerHTML)) {
+            badLettersArr.push(getButton[j].innerHTML);
+            updateBadLetterEl();
+          } 
+          else {
+            showNotification();
+            
+          }
+        }
+    
+  })
+}
 
 //bouton replay
 replayBtn.addEventListener("click", () => {
