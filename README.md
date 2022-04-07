@@ -31,9 +31,11 @@ try to think the *structure*, the "*backend*" (functionality) and the *frontend*
 - add an image for each step
 - check keyboard recognition
 
-**Bonus**:
+**Image**:
 
-- use canvas
+![Capture d’écran du 2022-04-07 11-12-22](https://user-images.githubusercontent.com/98493546/162166489-c795d4ce-9af3-46a4-bc5d-c0dd926098a3.png)
+
+
 
 NOTE: The instructions below are meant to guide you not impose a way of doing
 things, what matters is the end result.
@@ -48,4 +50,4 @@ things, what matters is the end result.
 
 ## Resources
 
-* URL: https://florianauc.github.io/Challenge-hangman/
+* URL:https://florianauc.github.io/Challenge-hangman/
