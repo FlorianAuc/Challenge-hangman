@@ -16,6 +16,7 @@ body {
   align-items: center;
   height: 80vh;
   overflow-x: hidden;
+  overflow-y: hidden;
 
 
   p {
@@ -160,10 +161,12 @@ h1 {
   position: absolute;
   bottom: -120px;
   transition: transform 0.5s ease-in-out;
+  opacity: 0;
 }
 
 .affiche {
   transform: translateY(-120px);
+  opacity: 1;
 }
 
 /* mobile */

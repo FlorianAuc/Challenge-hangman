@@ -1,30 +1,22 @@
 /*font-family: 'Roboto', sans-serif;
 font-family: 'Staatliches', cursive;*/
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin: 0 auto;
   padding: 0;
 }
 
 body {
-  background: #ccbcbc;
+  background: rgb(204, 188, 188);
   font-family: "Roboto", sans-serif;
   letter-spacing: 1px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   height: 80vh;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
-
 body p {
   font-size: 30px;
   margin-top: 10px;
@@ -49,65 +41,44 @@ h1 {
   width: 450px;
   position: relative;
 }
-
 .jeu-content .figure-content {
   stroke: black;
   stroke-width: 4px;
   stroke-linecap: round;
   fill: transparent;
 }
-
 .jeu-content .figure-content .figure-part {
   display: none;
 }
-
 .jeu-content .bad-letters-content {
   position: absolute;
   top: 10px;
   right: 30px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
   text-align: right;
 }
-
 .jeu-content .bad-letters-content p {
   margin: 0 0 5px;
   font-size: 25px;
   letter-spacing: 2px;
 }
-
 .jeu-content .bad-letters-content span {
   font-size: 20px;
   color: red;
 }
-
 .jeu-content .word {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   position: absolute;
   bottom: 20px;
-  -webkit-transform: translateX(20%);
-          transform: translateX(20%);
+  transform: translateX(20%);
 }
-
 .jeu-content .word .letters {
   border-bottom: 2px solid black;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   font-size: 35px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   margin: 0px 2px;
   width: 20px;
   font-family: "Staatliches", cursive;
@@ -122,24 +93,17 @@ h1 {
   right: 0;
   left: 0;
   display: none;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
-
 .popup-content .winner {
   background: rgba(0, 0, 0, 0.192);
   color: white;
   border-radius: 5px;
-  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.192);
-          box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.192);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.192);
   padding: 30px;
   text-align: center;
 }
-
 .popup-content .winner button {
   background: white;
   cursor: pointer;
@@ -147,21 +111,14 @@ h1 {
   margin-top: 10px;
   padding: 10px 40px;
   font-size: 20px;
-  -webkit-box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.192);
-          box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.192);
+  box-shadow: 5px 5px 15px 5px rgba(0, 0, 0, 0.192);
 }
-
 .popup-content .winner button:hover {
-  -webkit-transform: scale(1.2);
-          transform: scale(1.2);
-  -webkit-transition: 0.5s;
+  transform: scale(1.2);
   transition: 0.5s;
 }
-
 .popup-content .winner button:active {
-  -webkit-transform: scale(0.98);
-          transform: scale(0.98);
-  -webkit-transition: 0.2s;
+  transform: scale(0.98);
   transition: 0.2s;
 }
 
@@ -170,21 +127,18 @@ h1 {
   text-align: center;
   margin-top: 20px;
 }
-
 .keyboard .input_keyboard {
   padding: 10px 20px;
   cursor: pointer;
   color: white;
-  background: #443e3e;
+  background: rgb(68, 62, 62);
   border: none;
   margin: 2px 1px;
   text-transform: uppercase;
 }
-
 .keyboard .input_keyboard:active {
   background-color: black;
-  -webkit-transform: scale(0.9);
-          transform: scale(0.9);
+  transform: scale(0.9);
 }
 
 .notif-content {
@@ -193,15 +147,13 @@ h1 {
   padding: 10px 60px;
   position: absolute;
   bottom: -120px;
-  -webkit-transition: -webkit-transform 0.5s ease-in-out;
-  transition: -webkit-transform 0.5s ease-in-out;
   transition: transform 0.5s ease-in-out;
-  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+  opacity: 0;
 }
 
 .affiche {
-  -webkit-transform: translateY(-120px);
-          transform: translateY(-120px);
+  transform: translateY(-120px);
+  opacity: 1;
 }
 
 /* mobile */
@@ -215,11 +167,9 @@ h1 {
     bottom: -190px;
   }
   .affiche {
-    -webkit-transform: translateY(-190px);
-            transform: translateY(-190px);
+    transform: translateY(-190px);
   }
 }
-
 @media screen and (max-width: 420px) {
   .jeu-content .bad-letters-content p {
     margin: 8px 90px;
@@ -227,25 +177,21 @@ h1 {
     letter-spacing: 2px;
   }
 }
-
 @media screen and (max-width: 500px) {
   .jeu-content .bad-letters-content span {
     font-size: 17px;
     margin: 0px auto;
   }
 }
-
 @media screen and (max-width: 570px) {
   .jeu-content .figure-content {
     margin: 27px 30px;
   }
 }
-
 @media screen and (min-width: 760px) {
   .keyboard {
     text-align: center;
     margin-top: 20px;
     width: 40%;
   }
-}
-/*# sourceMappingURL=style.css.map */
+}/*# sourceMappingURL=style.css.map */
